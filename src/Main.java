@@ -4,6 +4,10 @@ import java.util.*;
 import java.util.Scanner;
 
 public class Main {
+
+  Address address = new Address();
+  Scanner scanner = new Scanner(System.in);
+
   public static void main(String[] args) {
     Main main = new Main();
     main.printOpeningMessage();
@@ -24,6 +28,10 @@ public class Main {
       if(input == 1) {
 
       } else if(input == 2) {
+        String userName = printNamePrompt();
+        String userAddress = printAddressPrompt();
+        String userNumber = printNumberPrompt();
+        address.setAddress(userName, userAddress, userNumber);
 
       } else if(input == 3) {
 
@@ -41,13 +49,29 @@ public class Main {
   }
 
   public int  getInput() {
-    Scanner scanner = new Scanner(System.in);
     return  scanner.nextInt();
   }
 
   public void printEndingMessage() {
     System.out.println("----프로그램을 종료합니다.----");
   }
+
+  public String printNamePrompt() {
+    System.out.println("이름을 입력해주세요.");
+    return scanner.nextLine();
+  }
+
+  public String printAddressPrompt() {
+    System.out.println("주소를 입력하세요.");
+    return scanner.nextLine();
+  }
+
+  public String printNumberPrompt() {
+    System.out.println("전화번호를 입력하세요.");
+    return scanner.nextLine();
+  }
+
+
 
 
 //  public List<List<String>> readCVS() {
