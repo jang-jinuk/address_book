@@ -8,12 +8,6 @@ public class Address {
   private String number;
   private List<List<String>> addressList;
 
-  public Address(String name, String address, String number) {
-    this.name = name;
-    this.address = address;
-    this.number = number;
-  }
-
   public List<List<String>> getAddressList() {
     return addressList;
   }
