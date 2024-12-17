@@ -1,10 +1,12 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Address {
   private String name;
   private String address;
   private String number;
+  private List<List<String>> addressList;
 
   public Address(String name, String address, String number) {
     this.name = name;
@@ -12,17 +14,11 @@ public class Address {
     this.number = number;
   }
 
-  public List<List<String>> getAddress() {
-    List<List<String>> list = new ArrayList<>();
-    return list;
+  public List<List<String>> getAddressList() {
+    return addressList;
   }
 
-  public List<String> setAddress(String name, String address, String number) {
-    List<String> list = new ArrayList<>();
-    list.add(name);
-    list.add(address);
-    list.add(number);
-
-    return list;
+  public void setAddress(String name, String address, String number) {
+    addressList.add(new ArrayList<>(Arrays.asList(name, address, number)));
   }
 }
