@@ -21,6 +21,13 @@ public class Main {
     while (input == 4) {
       showManu();
       input = getInput();
+      switch (input) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+          printEndingMessage();
+      }
     }
   }
 
@@ -31,8 +38,11 @@ public class Main {
 
   public int  getInput() {
     Scanner scanner = new Scanner(System.in);
-    int input = scanner.nextInt();
+    return  scanner.nextInt();
+  }
 
+  public void printEndingMessage() {
+    System.out.println("----프로그램을 종료합니다.----");
   }
 
 
