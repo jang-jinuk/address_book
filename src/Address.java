@@ -20,5 +20,16 @@ public class Address {
     for (int i = 0; i < addressList.size(); i++) {
       addressList.remove(i);
     }
+  
+  public void printAllAddresses() {
+    System.out.println(getAddressList());
+    for (List<String> addr : getAddressList()) {
+      System.out.println("Name: " + addr.get(0));
+      System.out.println("Address: " + addr.get(1));
+      System.out.println("Number: " + addr.get(2));
+      System.out.println("-------------------");
+    }
+  }
+  
   }
 }
