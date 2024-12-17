@@ -6,7 +6,7 @@ public class Address {
   private String name;
   private String address;
   private String number;
-  private List<List<String>> addressList;
+  private List<List<String>> addressList = new ArrayList<>();
 
   public List<List<String>> getAddressList() {
     return addressList;
