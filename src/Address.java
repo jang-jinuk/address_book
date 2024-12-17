@@ -15,4 +15,10 @@ public class Address {
   public void setAddress(String name, String address, String number) {
     addressList.add(new ArrayList<>(Arrays.asList(name, address, number)));
   }
+
+  public void deleteAllAddress() {
+    for (int i = 0; i < addressList.size(); i++) {
+      addressList.remove(i);
+    }
+  }
 }
